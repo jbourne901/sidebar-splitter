@@ -105,7 +105,10 @@ const App = () =>{
     <>
       {left}
 
-      <div className="splitter">
+      <div  className="splitter"
+            onMouseDown = {(e) => mouseDown(e)}
+            onTouchStart = {(e) => touchStart(e)}
+      >
       </div>
 
       <div className="panel-right">
@@ -129,8 +132,6 @@ const App = () =>{
   } else {
     app = ( <div style = { {transition} }
               className="app" ref={ref1}
-              onMouseDown = {(e) => mouseDown(e)}
-              onTouchStart = {(e) => touchStart(e)}
             >
               {ctl}
             </div>
